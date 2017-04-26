@@ -59,20 +59,24 @@ public class InitialiseTree {
 		middleHighGerman.addChild(new Node(new Language("German")));
 		middleHighGerman.addChild(new Node(new Language("Yiddish")));
 		
+		printStats(middleHighGerman);
+	}
+	
+	
+	public void printStats(Node node) {
 		
-		Node[] children = angloFrisian.children();
+		Node[] children = node.children();
 		
 		System.out.println("**Node information**");
-		System.out.println("Is Root? " + angloFrisian.isRoot());
-		System.out.println("Parent : " + angloFrisian.getParent().getLanguage().getLanguage());
-		System.out.println("Has Children ? " + angloFrisian.hasChildren());
-		System.out.println("This node has " + angloFrisian.countChildren() + " children"); 
+		System.out.println("Is Root? " + node.isRoot());
+		System.out.println("Parent : " + node.getParent().getLanguage().getLanguage());
+		System.out.println("Has Children ? " + node.hasChildren());
+		System.out.println("This node has " + node.countChildren() + " children"); 
 		
 		for (int i = 0; i < children.length; i++) {
 			System.out.print("==> " + children[i].getLanguage().getLanguage());
 			System.out.println();
 		}
 		System.out.println();
-		
 	}
 }
