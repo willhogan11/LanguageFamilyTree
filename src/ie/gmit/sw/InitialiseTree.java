@@ -59,7 +59,38 @@ public class InitialiseTree {
 		middleHighGerman.addChild(new Node(new Language("German")));
 		middleHighGerman.addChild(new Node(new Language("Yiddish")));
 		
-		printStats(middleHighGerman);
+		Node baltoSlavic = new Node(new Language("Balto Slavic"));
+		root.addChild(baltoSlavic);
+		
+		Node polish = new Node(new Language("Polish"));
+		Node russian = new Node(new Language("Russian"));
+		Node serboCroatian = new Node(new Language("Serbo Croatian"));
+		
+		baltoSlavic.addChild(polish);
+		baltoSlavic.addChild(russian);
+		baltoSlavic.addChild(serboCroatian);
+		
+		Node italic = new Node(new Language("Italic"));
+		root.addChild(italic);
+		
+		Node latin = new Node(new Language("Latin"));
+		italic.addChild(latin);
+		
+		Node french = new Node(new Language("French"));
+		Node spanish = new Node(new Language("Spanish"));
+		Node portuguese = new Node(new Language("Portuguese"));
+		Node italian = new Node(new Language("Italian"));
+		Node romanian = new Node(new Language("Romanian"));
+		Node catalan = new Node(new Language("Catalan"));
+		
+		latin.addChild(french);
+		latin.addChild(spanish);
+		latin.addChild(portuguese);
+		latin.addChild(italian);
+		latin.addChild(romanian);
+		latin.addChild(catalan);
+		
+		printStats(latin);
 	}
 	
 	
