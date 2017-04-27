@@ -90,7 +90,30 @@ public class InitialiseTree {
 		latin.addChild(romanian);
 		latin.addChild(catalan);
 		
-		printStats(latin);
+		Node celtic = new Node(new Language("Celtic"));
+		root.addChild(celtic);
+		
+		Node gaelic = new Node(new Language("Gaelic"));
+		Node scotsGaelic = new Node(new Language("scotsGaelic"));
+		Node welsh = new Node(new Language("Welsh"));
+		Node breton = new Node(new Language("Breton"));
+		Node manx = new Node(new Language("Manx"));
+		Node cornish = new Node(new Language("Cornish"));
+		
+		celtic.addChild(cornish);
+		celtic.addChild(manx);
+		celtic.addChild(breton);
+		celtic.addChild(welsh);
+		celtic.addChild(scotsGaelic);
+		celtic.addChild(gaelic);
+		
+		Node hellenic = new Node(new Language("Hellenic"));
+		root.addChild(hellenic);
+		
+		Node greek = new Node(new Language("Greek"));
+		hellenic.addChild(greek);
+		
+		printStats(celtic);
 	}
 	
 	

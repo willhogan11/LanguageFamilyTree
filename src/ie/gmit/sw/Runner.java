@@ -15,8 +15,12 @@ public class Runner {
 		searches = new Searches();
 		initialiseTree = new InitialiseTree();
 		initialiseTree.init(root);
+		
+		System.out.println("*****The Language Family Tree*****");
 		searches.depthFirstSearch(root, 0);
 		System.out.println();
+		
+		System.out.println("*****The DFS ordering******");
 		searches.stackDFS(root);
 	}
 }
